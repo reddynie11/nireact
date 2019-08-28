@@ -1,6 +1,7 @@
 import React from 'react';
 import Me from './Me';
 import Friends from './Friends';
+import Addfrnd from './AddFrnd';
 
 class App extends React.Component{
   state ={
@@ -29,6 +30,7 @@ class App extends React.Component{
         <input type='text' onChange={this.handleChange}/>
         <button onClick={this.handleClick}  >Submit</button>
         <Friends data={this.state.friends}/>
+        <Addfrnd />
 
 
       </div>
