@@ -13,7 +13,7 @@ class Addfrnd extends React.Component{
     }
     handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state)
+        this.props.addFrnd(this.state)
     }
     render(){
         return(

@@ -20,6 +20,13 @@ class App extends React.Component{
   handleClick =(e)=>{
     e.preventDefault();
     }
+  addFrnd = (newFrnd)=>{
+    console.log(newFrnd)
+    let Friends=[...this.state.friends,newFrnd]
+    this.setState({
+      friends:Friends
+    })
+  }
   
   render(){
     return(
@@ -30,7 +37,7 @@ class App extends React.Component{
         <input type='text' onChange={this.handleChange}/>
         <button onClick={this.handleClick}  >Submit</button>
         <Friends data={this.state.friends}/>
-        <Addfrnd />
+        <Addfrnd addFrnd={this.addFrnd}/>
 
 
       </div>

@@ -8,7 +8,7 @@ const Friends = ({data})=>{
                 <div style={{'display':'flex','flexDirection':'row'}} >
                     {data.map((frnd)=>{
                         return(
-                            <div key={frnd.id} style={{'border' : '1px solid black', 'width':'200px','padding':'10px','margin':'5px','flex-grow':'3','textAlign':'center'}}>
+                            <div key={frnd.id} style={{'border' : '1px solid black', 'width':'200px','padding':'10px','margin':'5px','flexGrow':'3','textAlign':'center'}}>
                                     <div>Name: {frnd.name}</div>
                                     <div>Age: {frnd.age}</div>
                                     <div>City: {frnd.city}</div>
