@@ -22,6 +22,7 @@ class App extends React.Component{
     }
   addFrnd = (newFrnd)=>{
     console.log(newFrnd)
+    newFrnd.id = Math.random();
     let Friends=[...this.state.friends,newFrnd]
     this.setState({
       friends:Friends
