@@ -28,6 +28,15 @@ class App extends React.Component{
       friends:Friends
     })
   }
+  delFrnd = (id)=>{
+    console.log(id)
+    let Friends = this.state.friends.filter((frnd)=>{
+      return frnd.id !== id
+    });
+    this.setState({
+      friends:Friends
+    })
+  }
   
   render(){
     return(
@@ -37,7 +46,7 @@ class App extends React.Component{
         <h2>Please enter your name below</h2>
         <input type='text' onChange={this.handleChange}/>
         <button onClick={this.handleClick}  >Submit</button>
-        <Friends data={this.state.friends}/>
+        <Friends data={this.state.friends} delFrnd={this.delFrnd}/>
         <Addfrnd addFrnd={this.addFrnd}/>
 
 
