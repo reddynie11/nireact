@@ -5,15 +5,15 @@ const Friends = ({data})=>{
         return(
             <div>
                 {data.map((frnd)=>{
-                    if (frnd.age<34){
-                        return(
+                    
+                        return frnd.age < 34 ? (
                             <div key={frnd.id} style={{'border' : '1px solid black'}}>
                                 <div>{frnd.name}</div>
                                 <div>{frnd.age}</div>
                                 <div>{frnd.city}</div>
                             </div>
-                        )
-                    }else return null;
+                        ):null
+                    
                 })}
             </div>
         )
