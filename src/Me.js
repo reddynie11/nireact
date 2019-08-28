@@ -1,6 +1,5 @@
 import React from 'react';
-import { directive } from '@babel/types';
-import App from './App';
+
 
 class Me extends React.Component{
     render(){
